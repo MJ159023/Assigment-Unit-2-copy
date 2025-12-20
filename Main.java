@@ -13,7 +13,7 @@
 */
 
 // get constants
-import ConstantsPackage.*;
+import ConstantsPackage.Constants;
 
 /**
 
@@ -36,43 +36,49 @@ final class Main {
 
     public static void main(final String[] args) {
         Hare hare = new Hare(Constants.HARE_COLOR, Constants.HARE_NAME,
-                        Constants.INTIAL_SPEED, Constants.HARE_INTIAL_HEALTH,
-                        Constants.HARE_DEFENSE, Constants.HARE_ATTACK_POWER,
-                        Constants.HARE_ATTACK_ACCURACY,
-                        Constants.INTIAL_HEIGHT, Constants.FALL_DISTANCE,
-                        Constants.SLIP_SPEED, Constants.HOP_HEIGHT, 
+                        Constants.HARE_INTIAL_HEALTH, Constants.HARE_DEFENSE,
+                        Constants.SLIP_SPEED, Constants.HOP_HEIGHT,
                         Constants.HARE_CLIMB_DISTANCE);
+        hare.setSpeed(Constants.INTIAL_SPEED);
+        hare.setHeight(Constants.INTIAL_HEIGHT);
+        hare.setFallDistance(Constants.FALL_DISTANCE);
+        hare.setAttackPower(Constants.HARE_ATTACK_POWER);
+        hare.setAttackAccuracy(Constants.HARE_ATTACK_ACCURACY);
 
         Tortoise tortoise = new Tortoise(Constants.TORTOISE_COLOR,
-                        Constants.TORTOISE_NAME, Constants.INTIAL_SPEED,
+                        Constants.TORTOISE_NAME,
                         Constants.TORTOISE_INTIAL_HEALTH,
                         Constants.TORTOISE_DEFENSE,
-                        Constants.TORTOISE_ATTACK_POWER,
-                        Constants.TORTOISE_ATTACK_ACCURACY,
-                        Constants.INTIAL_HEIGHT, FALL_DISTANCE,
                         Constants.STIFF_LIMB_DEBUFF,
-                        Constants.SWIM_SPEED, DEFENSE_BONUS);
+                        Constants.SWIM_SPEED, Constants.DEFENSE_BONUS);
+        tortoise.setSpeed(Constants.INTIAL_SPEED);
+        tortoise.setHeight(Constants.INTIAL_HEIGHT);
+        tortoise.setFallDistance(Constants.FALL_DISTANCE);
+        tortoise.setAttackPower(Constants.TORTOISE_ATTACK_POWER);
+        tortoise.setAttackAccuracy(Constants.TORTOISE_ATTACK_ACCURACY);
 
         Fox fox = new Fox(Constants.FOX_COLOR, Constants.FOX_NAME,
-                        Constants.INTIAL_SPEED, Constants.FOX_INTIAL_HEALTH,
-                        Constants.FOX_DEFENSE, Constants.FOX_ATTACK_POWER,
-                        Constants.FOX_ATTACK_ACCURACY,
-                        Constants.INTIAL_HEIGHT, Constants.FALL_DISTANCE,
+                        Constants.FOX_INTIAL_HEALTH, Constants.FOX_DEFENSE,
                         Constants.FOX_CLIMB_DISTANCE);
+        fox.setSpeed(Constants.INTIAL_SPEED);
+        fox.setHeight(Constants.INTIAL_HEIGHT);
+        fox.setFallDistance(Constants.FALL_DISTANCE);
+        fox.setAttackPower(Constants.FOX_ATTACK_POWER);
+        fox.setAttackAccuracy(Constants.FOX_ATTACK_ACCURACY);
 
         Squirell squirell = new Squirell(Constants.SQUIRELL_COLOR,
-                        Constants.SQUIRELL_NAME, Constants.INTIAL_SPEED,
+                        Constants.SQUIRELL_NAME,
                         Constants.SQUIRELL_INTIAL_HEALTH,
                         Constants.SQUIRELL_DEFENSE,
-                        Constants.SQUIRELL_ATTACK_POWER,
-                        Constants.SQUIRELL_ATTACK_ACCURACY,
-                        Constants.SQUIRELL_INTIAL_HEIGHT,
-                        Constants.FALL_DISTANCE,
-                        Constants.SQUIRELL_CLIMB_DISTANCE, GLIDE_DISTANCE);
+                        Constants.SQUIRELL_CLIMB_DISTANCE,
+                        Constants.GLIDE_DISTANCE);
+        squirell.setSpeed(Constants.INTIAL_SPEED);
+        squirell.setHeight(Constants.SQUIRELL_INTIAL_HEIGHT);
+        squirell.setFallDistance(Constants.FALL_DISTANCE);
+        squirell.setAttackPower(Constants.SQUIRELL_ATTACK_POWER);
+        squirell.setAttackAccuracy(Constants.SQUIRELL_ATTACK_ACCURACY);
 
         MainPart2 mainPart2 = new MainPart2();
-
-        constants constantsVariables = new constants();
 
         // opening of the story.
         System.out.println("There once was three animals in Jim's back yard.");
@@ -104,7 +110,7 @@ final class Main {
 
         System.out.println("\n");
 
-        System.out.println("The spirit of the " + fox.getName() + " accepts "
+        System.out.println("The spirit of the " + fox.getName() + " accepted "
                         + "their request on the condition that they help to "
                         + "turn Jim's yard into a safe haven for all the wild "
                         + "critters in the Peligara neighborhood.\nWhich they "
@@ -125,9 +131,8 @@ final class Main {
 
         System.out.println("\n");
 
-
-
-        System.out.println("Suddenly an acorn is fired from the tree "
+        System.out.println("Once reaching end of the pool an acorn suddenly "
+                        + "is fired from the tree "
                         + "directly at the " + hare.getName() + ".");
 
         hare.setDamage(squirell.basicAttack(squirell.getAttackPower(),
@@ -142,8 +147,8 @@ final class Main {
 
         System.out.println("\n");
 
-        System.out.println("As the pair finally cross the pool the "
-                        + hare.getName() + " begins to sprint towords the tree"
+        System.out.println("The " + hare.getName()
+                        + " begins to sprint towords the tree"
                         + " 100ft away while trying to dodge the acorn "
                         + "volley.\nThe " + hare.getName() + " sprint lasts "
                         + "two seconds at a power of 15.");
@@ -176,14 +181,6 @@ final class Main {
         System.out.println("The " + squirell.getName() + " once again fires at"
                         + " the " + hare.getName() + " but instead the "
                         + tortoise.getName() + " blocks the shot.");
-
-        tortoise.setDamage(squirell.basicAttack(squirell.getAttackPower(),
-                                squirell.getAttackAccuracy(),
-                                tortoise.getDefense(), tortoise.getName()));
-        tortoise.damageTaken();
-
-        System.out.println("\n");
-
-        mainPart2.runMainpart2();
+        mainPart2.runMain2();
     }
 }

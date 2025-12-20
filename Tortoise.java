@@ -32,26 +32,17 @@ public class Tortoise extends Animal {
      *
      * @param setColor
      * @param setName
-     * @param setSpeed
      * @param setHealth
      * @param setDefense
-     * @param setAttackPower
-     * @param setAttackAccuracy
-     * @param setAnimalElvation
-     * @param setFallDistance
      * @param setStiffLimbDebuff
      * @param setSwimSpeed
      * @param setDefenseBonus
      */
     public Tortoise(final String setColor, final String setName,
-                    final int setSpeed, final int setHealth,
-                    final int setDefense, final int setAttackPower,
-                    final int setAttackAccuracy, final int setAnimalElvation,
-                    final int setFallDistance, final int setStiffLimbDebuff,
-                    final int setSwimSpeed, final int setDefenseBonus) {
-        super(setColor, setName, setSpeed, setHealth, setDefense,
-                        setAttackPower, setAttackAccuracy, setAnimalElvation,
-                        setFallDistance);
+                    final int setHealth, final int setDefense,
+                    final int setStiffLimbDebuff, final int setSwimSpeed,
+                    final int setDefenseBonus) {
+        super(setColor, setName, setHealth, setDefense);
         this.stiffLimbDebuff = setStiffLimbDebuff;
         this.swimSpeed = setSwimSpeed;
         this.defenseBonus = setDefenseBonus;

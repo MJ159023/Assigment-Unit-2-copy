@@ -77,28 +77,15 @@ public abstract class Animal {
      *
      * @param setColor
      * @param setName
-     * @param setSpeed
      * @param setHealth
      * @param setDefense
-     * @param setAttackPower
-     * @param setAttackAccuracy
-     * @param setHeight
-     * @param setFallDistance
      */
     public Animal(final String setColor, final String setName,
-                    final int setSpeed, final int setHealth,
-                    final int setDefense, final int setAttackPower,
-                    final int setAttackAccuracy, final int setHeight,
-                    final int setFallDistance) {
+                    final int setHealth, final int setDefense) {
         this.color = setColor;
         this.name = setName;
-        this.speed = setSpeed;
         this.health = setHealth;
         this.defense = setDefense;
-        this.attackPower = setAttackPower;
-        this.attackAccuracy = setAttackAccuracy;
-        this.height = setHeight;
-        this.fallDistance = setFallDistance;
     }
 
     /**
@@ -234,6 +221,24 @@ public abstract class Animal {
      */
     public void setDefense(final int setDefense) {
         this.defense = setDefense;
+    }
+
+    /**
+     * sets attack power.
+     *
+     * @param setAttackPower
+     */
+    public void setAttackPower(final int setAttackPower) {
+        this.attackPower = setAttackPower;
+    }
+
+    /**
+     * sets attack accuracy.
+     *
+     * @param setAttackAccuracy
+     */
+    public void setAttackAccuracy(final int setAttackAccuracy) {
+        this.attackAccuracy = setAttackAccuracy;
     }
 
     /**
@@ -403,7 +408,7 @@ public abstract class Animal {
      * animals movement when forced to movement.
      */
     public void forcedMovement() {
-        System.out.println(this.name + " is moved "
+        System.out.println("The " + this.name + " is moved "
                         + this.forcedMovement + "ft.");
         this.forcedMovement = 0;
     }

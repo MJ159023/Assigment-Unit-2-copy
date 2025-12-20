@@ -27,26 +27,17 @@ public class Hare extends Animal {
      *
      * @param setColor
      * @param setName
-     * @param setSpeed
      * @param setHealth
      * @param setDefense
-     * @param setAttackPower
-     * @param setAttackAccuracy
-     * @param setAnimalElvation
-     * @param setFallDistance
      * @param setSlipSpeed
      * @param setHopHeight
      * @param setClimbDistance
      */
     public Hare(final String setColor, final String setName,
-                    final int setSpeed, final int setHealth,
-                    final int setDefense, final int setAttackPower,
-                    final int setAttackAccuracy, final int setAnimalElvation,
-                    final int setFallDistance, final int setSlipSpeed,
-                    final int setHopHeight, final int setClimbDistance) {
-        super(setColor, setName, setSpeed, setHealth, setDefense,
-                        setAttackPower, setAttackAccuracy, setAnimalElvation,
-                        setFallDistance);
+                    final int setHealth, final int setDefense,
+                    final int setSlipSpeed, final int setHopHeight,
+                    final int setClimbDistance) {
+        super(setColor, setName, setHealth, setDefense);
         this.slipSpeed = setSlipSpeed;
         this.hopHeight = setHopHeight;
         this.climbDistance = setClimbDistance;
