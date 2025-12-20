@@ -392,7 +392,7 @@ public abstract class Animal {
                    * fallDamageMultiplyer;
            System.out.println("The " + this.name + "  hits the ground"
                            + " and takes " + (this.fallCounter
-                                   * fallDamagMultiplyer)
+                                   * fallDamageMultiplyer)
                            + " fall damage.");
            this.fallCounter = 0;
         }
