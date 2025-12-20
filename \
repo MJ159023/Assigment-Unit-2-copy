@@ -1,0 +1,359 @@
+/*
+
+* This is the main code that runs with the Vehicle Class.
+
+*
+
+* @author  Mr Coxall
+
+* @version 1.0
+
+* @since   20240-01-01
+
+*/
+
+
+/**
+
+* This is the Main program.
+
+*/
+
+final class Main {
+    // MultipleStringLiterals & MagicNumbers
+
+    /**
+     * Creates a constant for Hare color.
+     */
+    private static final String HARE_COLOR = "White";
+
+    /**
+     * Creates a constant for Tortoise color.
+     */
+    private static final String TORTOISE_COLOR = "Green";
+
+    /**
+     * Creates a constant for Fox color.
+     */
+    private static final String FOX_COLOR = "BLUE";
+
+    /**
+     * Creates a constant for Squirell color.
+     */
+    private static final String SQUIRELL_COLOR = "Brown";
+
+    /**
+     * Creates a constant for Hare name.
+     */
+    private static final String HARE_NAME = "Hare";
+
+    /**
+     * Creates a constant for Tortoise name.
+     */
+    private static final String TORTOISE_NAME = "Tortoise";
+
+    /**
+     * Creates a constant for Fox name.
+     */
+    private static final String FOX_NAME = "Fox";
+
+    /**
+     * Creates a constant for Squirell name.
+     */
+    private static final String SQUIRELL_NAME = "Squirell";
+
+    /**
+     * Creates a constant for anaimals intial speeds.
+     */
+    private static final int INTIAL_SPEED = 0;
+
+    /**
+     * Creates a constant for Hare's intial health.
+     */
+    private static final int HARE_INTIAL_HEALTH = 80;
+
+    /**
+     * Creates a constant for Tortoise's intial health.
+     */
+    private static final int TORTOISE_INTIAL_HEALTH = 120;
+
+    /**
+     * Creates a constant for Fox's intial health.
+     *
+     * Fox is spirit and can't die which why it's health is so large
+     */
+    private static final int FOX_INTIAL_HEALTH = 1000000;
+
+    /**
+     * Creates a constant for Squirell's intial health.
+     */
+    private static final int SQUIRELL_INTIAL_HEALTH = 200;
+
+    /**
+     * Creates a constant for Hare's defense.
+     */
+    private static final int HARE_DEFENSE = 10;
+
+    /**
+     * Creates a constant for Tortoise's defense.
+     */
+    private static final int TORTOISE_DEFENSE = 14;
+
+    /**
+     * Creates a constant for Fox's defense.
+     *
+     * Fox is spirit and so can't be hit
+     */
+    private static final int FOX_DEFENSE = 100;
+
+    /**
+     * Creates a constant for Squirell's defense
+     */
+    private static final int SQUIRELL_DEFENSE = 11;
+
+    /**
+     * Creates a constant for Hare's attack power.
+     */
+    private static final int HARE_ATTACK_POWER = 13;
+
+    /**
+     * Creates a constant for Tortoise's attack power.
+     */
+    private static final int TORTOISE_ATTACK_POWER = 18;
+
+    /**
+     * Creates a constant for Fox's attack power.
+     *
+     * Fox is a spirit and so can't hurt others
+     */
+    private static final int FOX_ATTACK_POWER = 0;
+
+    /**
+     * Creates a constant for Squirell's attack power.
+     */
+    private static final int SQUIRELL_ATTACK_POWER = 15;
+
+    /**
+     * Creates a constant for Hare's attack accuracy.
+     */
+    private static final int HARE_ATTACK_ACCURACY = 11;
+
+    /**
+     * Creates a constant for Tortoise's attack accuracy.
+     */
+    private static final int TORTOISE_ATTACK_ACCURACY = 10;
+
+    /**
+     * Creates a constant for Fox's attack accuracy.
+     *
+     * Fox is a spirit and so can't hit other animals
+     */
+    private static final int FOX_ATTACK_ACCURACY = 0;
+
+    /**
+     * Creates a constant for Squirell's attack accuracy.
+     */
+    private static final int SQUIRELL_ATTACK_ACCURACY = 12;
+
+    /**
+     * Creates a constant for animals intial height.
+     */
+    private static final int INTIAL_HEIGHT = 0;
+
+    /**
+     * Creates a constant for animals fall distance.
+     */
+    private static final int FALL_DISTANCE = 10;
+
+    /**
+     * Creates a constant for Hare's slip speed.
+     */
+    private static final int SLIP_SPEED = 10;
+
+    /**
+     * Creates a consatnt for hwo high the Hare can jump.
+     */
+    private static final int HOP_HEIGHT = 30;
+
+    /**
+     * Creates a constant for Hare's climb distance.
+     */
+    private static final int HARE_CLIMB_DISTANCE = 10;
+
+    /**
+     * Creates a constant for Fox's climb distance.
+     */
+    private static final int FOX_CLIMB_DISTANCE = 10;
+
+    /**
+     * Creates a constant for Squirell's climb distance.
+     */
+    private static final int SQUIRELL_CLIMB_DISTANCE = 40;
+
+    /**
+     * Creates a constant for Tortoise's stiffness.
+     */
+    private static final int STIFF_LIMB_DEBUFF = 5;
+
+    /**
+     * Creates a constant for Tortoise's swim speed.
+     */
+    private static final int SWIM_SPEED = 15;
+
+    /**
+     * Creates a constant for Tortoise's defense bonus.
+     */
+    private static final int DEFENSE_BONUS = 2;
+
+    /**
+     * Creates a constant for Squirell's glide speed.
+     */
+    private static final int GLIDE_SPEED = 25;
+
+    /**
+     * Creates a constant for swim time.
+     */
+    private static final int SWIM_TIME = 4;
+
+    /**
+     * creates a constant for Hare acceleration power.
+     */
+    private static final int HARE_ACCELERATION_POWER_1 = 15;
+
+    /**
+     * Creates a constant for Hare acceleration time.
+     */
+    private static final int HARE_ACCELERATION_TIME_1 = 2;
+
+    /**
+     * Creates a constant for Tortiose acceleration and brake power.
+     */
+    private static final int TORTOISE_POWER = 5;
+
+    /**
+     * Creates a constant for Tortoise acceleration and brake time.
+     */
+    private static final int TORTOISE_TIME = 10;
+
+
+    /**
+     * Private constructor to prevent instantiation.
+     * Throw an excpetion IllegalState Exception
+     * if this is ever called
+     *
+     * @throws IllegalStateException if this is ever called
+     *
+    */
+    private Main() {
+        throw new IllegalStateException("Cannot be instantiated.");
+    }
+
+    public static void main(final String[] args) {
+        Hare hare = new Hare(HARE_COLOR, HARE_NAME, INTIAL_SPEED,
+                        HARE_INTIAL_HEALTH, HARE_DEFENSE, HARE_ATTACK_POWER,
+                        HARE_ATTACK_ACCURACY, INTIAL_HEIGHT, FALL_DISTANCE,
+                        SLIP_SPEED, HOP_HEIGHT, HARE_CLIMB_DISTANCE);
+
+        Tortoise tortoise = new Tortoise(TORTOISE_COLOR, TORTOISE_NAME,
+                        INTIAL_SPEED, TORTOISE_INTIAL_HEALTH, TORTOISE_DEFENSE,
+                        TORTOISE_ATTACK_POWER, TORTOISE_ATTACK_ACCURACY,
+                        INTIAL_HEIGHT, FALL_DISTANCE, STIFF_LIMB_DEBUFF,
+                        SWIM_SPEED, DEFENSE_BONUS);
+        
+        Fox fox = new Fox(FOX_COLOR, FOX_NAME, INTIAL_SPEED, FOX_INTIAL_HEALTH,
+                        FOX_DEFENSE, FOX_ATTACK_POWER, FOX_ATTACK_ACCURACY,
+                        INTIAL_HEIGHT, FALL_DISTANCE, FOX_CLIMB_DISTANCE);
+
+        Squirell squirell = new Squirell(SQUIRELL_COLOR, SQUIRELL_NAME,
+                        INTIAL_SPEED, SQUIRELL_INTIAL_HEALTH, SQUIRELL_DEFENSE,
+                        SQUIRELL_ATTACK_POWER, SQUIRELL_ATTACK_ACCURACY, 
+                        INTIAL_HEIGHT, FALL_DISTANCE, GLIDE_SPEED,
+                        SQUIRELL_CLIMB_DISTANCE);
+
+        // opening of the story.
+        System.out.println("There once was three animals in Jim's back yard.");
+        System.out.println("There was the daring " + hare.getColor()
+                        + " " + hare.getName() + " who mastered his trusty"
+                        + " boomerang.\nThen there was the "
+                        + tortoise.getColor() + " " + tortoise.getName()
+                        + " the slowest of the pack but also the " 
+                        + "strongest of the group.\nFinally there was the " 
+                        + squirell.getColor()
+                        + " " + squirell.getName() + " the schemer of the trio"
+                        + " who had made his home in sally's treehouse,"
+                        + " Jim's daughter.");
+
+        System.out.println("\n");
+
+        System.out.println("All was well for animals in the yard until winter "
+                        + "came.\nSuddenly the " + hare.getName() + " and "
+                        + tortoise.getName() + " awoke to find there winter "
+                        + "rations had been plundered. The only clue left was "
+                        + "a half eaten acorn.\nAs the two went to question"
+                        + " the " + squirell.getName()
+                        + " they realized he'd baricaded "
+                        + "himself inside the treehosue.\nThe two furious "
+                        + "gathered suplies to fight back and take back what "
+                        + "was rightfully their's\nand called to the spirit"
+                        + " of the " + fox.getName() + " to aid them on their "
+                        + "journey.");
+
+        System.out.println("\n");
+        
+        System.out.println("The spirit of the " + fox.getName() + " accepts "
+                        + "their request on the condition that they help to " 
+                        + "turn Jim's yard into a safe haven for all the wild "
+                        + "critters in the Peligara neighborhood.\nWhich they "
+                        + "gladly agree to. With that the three begin to "
+                        + "journey to defeat the " + squirell.getName() + "!");
+
+        System.out.println("The group reach the great plastic pool of Pepco "
+                        + "they could go around but it would take longer.\n"
+                        + "The " + hare.getName() + " is unable to swim so "
+                        + "the " + tortoise.getName() + " decides to bring the"
+                        + " " + hare.getName() + " on it's back.");
+
+        // sets swimTime to 4 seconds
+        tortoise.setSwimTime(SWIM_TIME);
+        System.out.println("For 4 seconds the");
+        hare.setForcedMovement(tortoise.specialMovement());
+        hare.forcedMovement();
+
+        System.out.println("\n");
+
+        System.out.println("Suddenly an acorn is fired from the tree "
+                        + "directly at the " + hare.getName() + ".");
+
+        hare.setDamage(squirell.basicAttack(squirell.getAttackPower(),
+                        squirell.getAttackAccuracy(), hare.getDefense(),
+                        hare.getName()));
+        hare.damageTaken();
+
+        System.out.println("The " + hare.getName() + " has " + hare.getHealth()
+                        + "hp left.\nThe " + hare.getName() + " looks up "
+                        + "to see the " + squirell.getName() + " firing it's "
+                        + "acorn cannon from the treehoue.");
+
+        System.out.println("\n");
+
+        System.out.println("As the pair finally cross the pool the "
+                        + hare.getName() + " begins to sprint towords the tree"
+                        + " 180ft away while trying to dodge the acorn "
+                        + "volley.\nThe " + hare.getName() + " sprint lasts "
+                        + "two seconds at a power of 15.");
+        hare.accelerate(HARE_ACCELERATION_POWER_1, HARE_ACCELERATION_TIME_1);
+
+        System.out.println("Another shot fires out.");
+        hare.setDamage(squirell.basicAttack(squirell.getAttackPower(),
+                                squirell.getAttackAccuracy(),
+                                hare.getDefense(), hare.getName()));
+        hare.damageTaken();
+        System.out.println("The " + hare.getName() + " has " + hare.getHealth()
+                        + "hp left.\nAnd after getting hit it "
+                        + "falls over unable to get back up.");
+
+        System.out.println("The " + tortoise.getName() + " moves as fast as it"
+                        + " can protect the " + hare.getName() + ".\n"
+                        +);
+    }
+}
