@@ -8,17 +8,7 @@
 
 public class Hare extends Animal {
     /**
-     * The hare is not able to brake without slipping on the ground a bit.
-     */
-    private int slipSpeed;
-
-    /**
-     * The hare can jump super high this there jump bonus
-     */
-    private int hopHeight;
-
-    /**
-     * The hare climb distance
+     * The Squirell's climb distance
      */
     private int climbDistance;
 
@@ -34,16 +24,13 @@ public class Hare extends Animal {
      * @param setAttackAccuracy
      * @param setAnimalElvation
      * @param setFallDistance
-     * @param setSlipSpeed
-     * @param setHepHeight
      * @param setClimbDistance
      */
     public Hare(final String setColor, final String setName,
                     final int setSpeed, final int setHealth,
                     final int setDefense, final int setAttackPower,
                     final int setAttackAccuracy, final int setAnimalElvation,
-                    final int setFallDistance, final int setSlipSpeed,
-                    final int setHopHeight, final int setClimbDistance) {
+                    final int setFallDistance, final int setClimbDistance) {
         super(setColor, setName, setSpeed, setHealth, setDefense,
                         setAttackPower, setAttackAccuracy, setAnimalElvation,
                         setFallDistance);
@@ -53,7 +40,7 @@ public class Hare extends Animal {
     }
 
     /**
-     * Hare slow down.
+     * Squirell slow down.
      *
      * @param brakePower
      * @param brakeTime
@@ -69,7 +56,7 @@ public class Hare extends Animal {
     }
 
     /**
-     * Hare speeds up. 
+     * Squirell speeds up. 
      *
      * @param accelerationPower
      * @param accelerationTime
@@ -87,7 +74,7 @@ public class Hare extends Animal {
     }
 
     /**
-     * the hare's special movemnet ability is it can hop super high and far.
+     * the Squirell's special movemnet ability is it can hop super high and far.
      *
      * @return height
      */
@@ -100,7 +87,7 @@ public class Hare extends Animal {
     }
 
     /**
-     * the hare's special ability is it can bounce kick off enemies.
+     * the Squirell's special ability is it can bounce kick off enemies.
      *
      * @param enemyAttacked
      * @param sepecialDamage
@@ -118,7 +105,7 @@ public class Hare extends Animal {
 
     
     /**
-     * Hare's climbing speed.
+     * Squirell's climbing speed.
      *
      * @return height
      */

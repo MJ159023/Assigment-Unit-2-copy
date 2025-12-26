@@ -6,14 +6,14 @@
  * @since   2020-10-12
  */
 
-public class Squirell extends Animal {
+public class Squirrel extends Animal {
     /**
-     * The squirell climb distance.
+     * The squirrel climb distance.
      */
     private int climbDistance;
 
     /**
-     * squirell glide distance.
+     * squirrel glide distance.
      */
     private int glideDistance;
 
@@ -27,7 +27,7 @@ public class Squirell extends Animal {
      * @param setClimbDistance
      * @param setGlideDistance
      */
-    public Squirell(final String setColor, final String setName,
+    public Squirrel(final String setColor, final String setName,
                     final int setHealth, final int setDefense,
                     final int setClimbDistance, final int setGlideDistance) {
         super(setColor, setName, setHealth, setDefense);
@@ -36,7 +36,7 @@ public class Squirell extends Animal {
     }
 
      /**
-     * Squirell slow down.
+     * Squirrel slow down.
      *
      * @param brakePower
      * @param brakeTime
@@ -76,10 +76,10 @@ public class Squirell extends Animal {
         }
 
         System.out.println("The " + getName()
-                        + " begins to try to hault "
+                        + " begins to try to halt "
                         + "traveling"
-                        + " " + getDistanceTravelled() + "ft. Reducing it's "
-                        + "speed to " + getSpeed() + ".");
+                        + " " + getDistanceTravelled() + " feet, reducing it's"
+                        + " speed to " + getSpeed() + " feet per second.");
 
         setDistanceTravelled(0);
         return getSpeed();
@@ -87,7 +87,7 @@ public class Squirell extends Animal {
 
 
     /**
-     * Squirell speeds up.
+     * Squirrel speeds up.
      *
      * @param accelerationPower
      * @param accelerationTime
@@ -97,29 +97,30 @@ public class Squirell extends Animal {
                     final int accelerationTime) {
         setSpeed(getSpeed() + (accelerationPower * accelerationTime));
         setDistanceTravelled(getSpeed() * accelerationTime);
-        System.out.println(getName() + " travels "
-                        + getDistanceTravelled() + "ft.\nReaches a speed of "
-                        + getSpeed() + ".");
+        System.out.println("The " + getName() + " travels "
+                        + getDistanceTravelled()
+                        + " feet,\nreaching a speed of"
+                        + " " + getSpeed() + " feet per second.");
         setDistanceTravelled(0);
         return getSpeed();
     }
 
     /**
-     * the squirell special movement ability is that it can glide.
+     * the squirrel special movement ability is that it can glide.
      *
      * @return height
      */
     public int specialMovement() {
         setHeight(getHeight() - getFallDistance());
-        System.out.println("The Squirell begins to glide " + this.glideDistance
-                        + "ft and decends " + getFallDistance() + ".\n"
+        System.out.println("The Squirrel begins to glide " + this.glideDistance
+                        + " feet and decends " + getFallDistance() + " feet.\n"
                         + "The Squirell is now at a height of " + getHeight()
-                        + "ft.");
+                        + " feet.");
         return getHeight();
     }
 
     /**
-     * the hare's special ability is squirell acorn gatling gun.
+     * the Squirrel's special ability is squirell acorn gatling gun.
      *
      * @param enemyAttacked
      * @param specialDamage
@@ -128,23 +129,24 @@ public class Squirell extends Animal {
     public int specialAbility(final String enemyAttacked,
                     final int specialDamage) {
         setDamage(specialDamage);
-        System.out.println("The squirell begins to fire at everyone"
-                        + " in the 20ft area");
+        System.out.println("The squirrel begins to fire at everyone"
+                        + " in the 20 feet area");
         return getDamage();
     }
 
     /**
-     * Hare's climbing speed.
+     * Squirrel's climbing speed.
      *
      * @return height
      */
     public int climb() {
         setHeight(getHeight() + this.climbDistance);
-        System.out.println("The Squirell begins scartching the tree "
-                        + "trunk latching on with it's paws.\nIt slowly climbs"
-                        + " " + this.climbDistance + "ft up the"
+        System.out.println("The Squirrel begins scartching the tree "
+                        + "trunk and latches on with its paws. "
+                        + "\nIt slowly climbs " + this.climbDistance
+                        + " feet up the"
                         + " tree.\nReaching "
-                        + "a height of " + getHeight() + "ft.");
+                        + "a height of " + getHeight() + " feet.");
         return getHeight();
     }
 }

@@ -8,12 +8,12 @@
 
 public class Tortoise extends Animal {
     /**
-     * The tortoise moves slower making it harder to go fast.
+     * The Tortoise moves slower making it harder to go fast.
      */
     private int stiffLimbDebuff;
 
     /**
-     * The tortoise swim speed.
+     * The Tortoise swim speed.
      */
     private int swimSpeed;
 
@@ -23,7 +23,7 @@ public class Tortoise extends Animal {
     private int swimTime;
 
     /**
-     * tortoise gets defense bonus while inside shell.
+     * Tortoise gets defense bonus while inside shell.
      */
     private int defenseBonus;
 
@@ -99,10 +99,10 @@ public class Tortoise extends Animal {
         }
 
         System.out.println("The " + getName()
-                        + " begins to try to hault "
+                        + " begins to try to halt "
                         + "traveling"
-                        + " " + getDistanceTravelled() + "ft. Reducing it's "
-                        + "speed to " + getSpeed() + ".");
+                        + " " + getDistanceTravelled() + " feet, reducing its"
+                        + " speed to " + getSpeed() + " feet per second.");
 
         setDistanceTravelled(0);
         return getSpeed();
@@ -122,8 +122,8 @@ public class Tortoise extends Animal {
         setDistanceTravelled(getSpeed() * accelerationTime);
 
         System.out.println("The " + getName() + " travels "
-                        + getDistanceTravelled() + "ft. Reaching a speed of "
-                        + getSpeed());
+                        + getDistanceTravelled() + " feet, reaching a speed of"
+                        + " " + getSpeed() + " feet per second.");
         setDistanceTravelled(0);
         return getSpeed();
     }
@@ -136,14 +136,14 @@ public class Tortoise extends Animal {
     public int specialMovement() {
         setDistanceTravelled(this.swimSpeed * this.swimTime);
         System.out.println(getName() + " swims " + getDistanceTravelled()
-                        + "ft through the kiddy pool with the"
-                        + " Hare on it's back.");
+                        + " feet through the kiddy pool with the"
+                        + " Hare on its back.");
         setForcedMovement(getDistanceTravelled());
         return getForcedMovement();
     }
 
     /**
-     * the tortoise special ability is to tuck into shell and spin attacks.
+     * the Tortoise special ability is to tuck into shell and spin attacks.
      *
      * @param enemyAttacked
      * @param specialDamage
@@ -153,20 +153,20 @@ public class Tortoise extends Animal {
                     final int specialDamage) {
         // adds defense when in shell
         setDefense(getDefense() + this.defenseBonus);
-        System.out.println("Tortoise tucks inside shell"
-                        + " and spins bouncing off of " + enemyAttacked);
+        System.out.println("Tortoise tucks inside its shell"
+                        + " and spins, bouncing off the " + enemyAttacked);
         setDamage(specialDamage);
         return getDamage();
     }
 
     /**
-     * Hare's climbing speed.
+     * Tortoise's climbing speed.
      *
      * @return height
      */
     public int climb() {
-        System.out.println("The tortoise struggles to climb the tree and"
-                        + " after lots of effort the tortoise is still at"
+        System.out.println("The tortoise struggles to climb the tree and,"
+                        + " after lots of effort, the tortoise is still at"
                         + " ground level.");
         return getHeight();
     }

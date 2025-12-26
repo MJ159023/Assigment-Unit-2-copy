@@ -390,8 +390,9 @@ public abstract class Animal {
         if (this.height != 0) {
             System.out.println("The " + this.name + " falls down "
                             + this.fallDistance
-                            + "ft towards the ground.\nNow the " + this.name
-                            + " is " + this.height + "ft above the ground.");
+                            + " feet towards the ground,\nnow the " + this.name
+                            + " is " + this.height
+                            + " feet above the ground.");
         } else {
            this.health = this.health - this.fallCounter
                    * fallDamageMultiplyer;
@@ -409,7 +410,7 @@ public abstract class Animal {
      */
     public void forcedMovement() {
         System.out.println("The " + this.name + " is moved "
-                        + this.forcedMovement + "ft.");
+                        + this.forcedMovement + " feet.");
         this.forcedMovement = 0;
     }
 }

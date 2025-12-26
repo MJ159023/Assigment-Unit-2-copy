@@ -85,10 +85,10 @@ public class Hare extends Animal {
         }
 
         System.out.println("The " + getName()
-                        + " begins to try to hault "
+                        + " begins to try to halt "
                         + "traveling"
-                        + " " + getDistanceTravelled() + "ft. Reducing it's "
-                        + "speed to " + getSpeed() + ".");
+                        + " " + getDistanceTravelled() + " feet, reducing its"
+                        + " speed to " + getSpeed() + " feet per second.");
 
         setDistanceTravelled(0);
         return getSpeed();
@@ -108,8 +108,8 @@ public class Hare extends Animal {
                         + this.slipSpeed);
         setDistanceTravelled(getSpeed() * accelerationTime);
         System.out.println("The " + getName() + " begins to hop and travels "
-                        + getDistanceTravelled() + "ft. Reaching a speed of "
-                        + getSpeed() + ".");
+                        + getDistanceTravelled() + " feet, reaching a speed of"
+                        + " " + getSpeed() + " feet per second.");
         setDistanceTravelled(0);
         return getSpeed();
     }
@@ -124,8 +124,8 @@ public class Hare extends Animal {
         System.out.println("The Hare lowers itself"
                         + " to the ground readying itself.\nThen in an instant"
                         + " the Hare hops " + this.hopHeight
-                        + "ft into the air.\nReaching a height of "
-                        + getHeight() + "ft.");
+                        + " feet into the air,\nreaching a height of "
+                        + getHeight() + " feet.");
         return getHeight();
     }
 
@@ -141,7 +141,7 @@ public class Hare extends Animal {
         setHeight(getHeight() - getFallDistance());
         setFallCounter(0);
         System.out.println("Hare falls " + getFallDistance()
-                        + "ft as it bounces off the " + enemyAttacked);
+                        + " feet and bounces off the " + enemyAttacked);
         setDamage(specialDamage);
         return getDamage();
     }
@@ -155,10 +155,10 @@ public class Hare extends Animal {
     public int climb() {
         setHeight(getHeight() + this.climbDistance);
         System.out.println("The Hare begins scraching the tree "
-                        + "trunk latching on with it's paws.\nIt quickly "
-                        + "climbs " + this.climbDistance + "ft up the"
+                        + "trunk and latches on with it's paws.\nIt quickly "
+                        + "climbs " + this.climbDistance + " feet up the"
                         + " tree.\nReaching "
-                        + "a height of " + getHeight() + "ft.");
+                        + "a height of " + getHeight() + " feet.");
         return getHeight();
     }
 }

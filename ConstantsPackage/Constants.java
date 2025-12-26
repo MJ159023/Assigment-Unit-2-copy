@@ -32,9 +32,9 @@ public class Constants {
     public static final String FOX_COLOR = "BLUE";
 
     /**
-     * Creates a constant for Squirell color.
+     * Creates a constant for Squirrel color.
      */
-    public static final String SQUIRELL_COLOR = "Brown";
+    public static final String SQUIRREL_COLOR = "Brown";
 
     /**
      * Creates a constant for Hare name.
@@ -52,9 +52,9 @@ public class Constants {
     public static final String FOX_NAME = "Fox";
 
     /**
-     * Creates a constant for Squirell name.
+     * Creates a constant for Squirrel name.
      */
-    public static final String SQUIRELL_NAME = "Squirell";
+    public static final String SQUIRREL_NAME = "Squirrel";
 
     /**
      * Creates a constant for anaimals intial speeds.
@@ -79,9 +79,9 @@ public class Constants {
     public static final int FOX_INTIAL_HEALTH = 1000000;
 
     /**
-     * Creates a constant for Squirell's intial health.
+     * Creates a constant for Squirrel's intial health.
      */
-    public static final int SQUIRELL_INTIAL_HEALTH = 100;
+    public static final int SQUIRREL_INTIAL_HEALTH = 100;
 
     /**
      * Creates a constant for Hare's defense.
@@ -101,9 +101,9 @@ public class Constants {
     public static final int FOX_DEFENSE = 100;
 
     /**
-     * Creates a constant for Squirell's defense.
+     * Creates a constant for Squirrel's defense.
      */
-    public static final int SQUIRELL_DEFENSE = 11;
+    public static final int SQUIRREL_DEFENSE = 11;
 
     /**
      * Creates a constant for Hare's attack power.
@@ -123,9 +123,9 @@ public class Constants {
     public static final int FOX_ATTACK_POWER = 0;
 
     /**
-     * Creates a constant for Squirell's attack power.
+     * Creates a constant for Squirrel's attack power.
      */
-    public static final int SQUIRELL_ATTACK_POWER = 15;
+    public static final int SQUIRREL_ATTACK_POWER = 15;
 
     /**
      * Creates a constant for Hare's attack accuracy.
@@ -145,9 +145,9 @@ public class Constants {
     public static final int FOX_ATTACK_ACCURACY = 0;
 
     /**
-     * Creates a constant for Squirell's attack accuracy.
+     * Creates a constant for Squirrel's attack accuracy.
      */
-    public static final int SQUIRELL_ATTACK_ACCURACY = 12;
+    public static final int SQUIRREL_ATTACK_ACCURACY = 12;
 
     /**
      * Creates a constant for animals intial height.
@@ -155,9 +155,9 @@ public class Constants {
     public static final int INTIAL_HEIGHT = 0;
 
     /**
-     * Creates a constant for intial height of the Squirell.
+     * Creates a constant for intial height of the Squirrel.
      */
-    public static final int SQUIRELL_INTIAL_HEIGHT = 40;
+    public static final int SQUIRREL_INTIAL_HEIGHT = 40;
 
     /**
      * Creates a constant for animals fall distance.
@@ -170,7 +170,7 @@ public class Constants {
     public static final int SLIP_SPEED = 10;
 
     /**
-     * Creates a consatnt for hwo high the Hare can jump.
+     * Creates a consatnt for how high the Hare can jump.
      */
     public static final int HOP_HEIGHT = 30;
 
@@ -185,9 +185,9 @@ public class Constants {
     public static final int FOX_CLIMB_DISTANCE = 10;
 
     /**
-     * Creates a constant for Squirell's climb distance.
+     * Creates a constant for Squirrel's climb distance.
      */
-    public static final int SQUIRELL_CLIMB_DISTANCE = 40;
+    public static final int SQUIRREL_CLIMB_DISTANCE = 40;
 
     /**
      * Creates a constant for Tortoise's stiffness.
@@ -205,7 +205,7 @@ public class Constants {
     public static final int DEFENSE_BONUS = 2;
 
     /**
-     * Creates a constant for Squirell's glide distance.
+     * Creates a constant for Squirrel's glide distance.
      */
     public static final int GLIDE_DISTANCE = 60;
 
@@ -275,24 +275,24 @@ public class Constants {
     public static final int TORTOISE_SPECIAL_DAMAGE = 25;
 
     /**
-     * Creates a constant for Squirell's acceleration power.
+     * Creates a constant for Squirrel's acceleration power.
      */
-    public static final int SQUIRELL_ACCELERATION_POWER = 7;
+    public static final int SQUIRREL_ACCELERATION_POWER = 7;
 
     /**
-     * Creates a constant for Squirell's accelertion time.
+     * Creates a constant for Squirrel's accelertion time.
      */
-    public static final int SQUIRELL_ACCELERATION_TIME = 3;
+    public static final int SQUIRREL_ACCELERATION_TIME = 3;
 
     /**
-     * Creates a constant for Squirell's crash damage.
+     * Creates a constant for Squirrel's crash damage.
      */
-    public static final int SQUIRELL_CRASH_DAMAGE = 5;
+    public static final int SQUIRREL_CRASH_DAMAGE = 5;
 
     /**
-     * Create a constant for Squirell's special damage.
+     * Create a constant for Squirrel's special damage.
      */
-    public static final int SQUIRELL_SPECIAL_DAMAGE = 15;
+    public static final int SQUIRREL_SPECIAL_DAMAGE = 15;
 
     /**
      * Private constructor to prevent instantiation.

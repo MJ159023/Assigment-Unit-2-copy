@@ -81,12 +81,11 @@ public class Fox extends Animal {
         if (getSpeed() < 0) {
             setSpeed(0);
         }
-
         System.out.println("The " + getName()
-                        + " begins to try to hault "
+                        + " begins to try to halt "
                         + "traveling"
-                        + " " + getDistanceTravelled() + "ft. Reducing it's "
-                        + "speed to " + getSpeed() + ".");
+                        + " " + getDistanceTravelled() + " feet, reducing it's"
+                        + " speed to " + getSpeed() + " feet per second.");
 
         setDistanceTravelled(0);
         return getSpeed();
@@ -105,26 +104,26 @@ public class Fox extends Animal {
         setSpeed(getSpeed() + (accelerationPower * accelerationTime));
         setDistanceTravelled(getSpeed() * accelerationTime);
         System.out.println(getName() + " travels "
-                        + getDistanceTravelled() + "ft.\n Reaching a speed "
-                        + "of " + getSpeed() + ".");
+                        + getDistanceTravelled() + " feet,\n reaching a speed "
+                        + "of " + getSpeed() + " feet per second.");
         setDistanceTravelled(0);
         return getSpeed();
     }
 
     /**
-     * the fox special movement is that it can telport it's friends 40ft.
+     * the Fox's special movement is that it can telport it's friends.
      *
      * @return forcedMovement
      */
     public int specialMovement() {
-        System.out.println(getName() + " eyes light up in firery glow as it"
-                        + " telports the " + this.allyName + " "
-                        + getForcedMovement() + "ft.");
+        System.out.println(getName() + " eyes light up in fiery glow as it"
+                        + " teleports the " + this.allyName + " "
+                        + getForcedMovement() + " feet.");
         return getForcedMovement();
     }
 
     /**
-     * the hare's special ability is that it can heal damage.
+     * the Fox's special ability is that it can heal damage.
      *
      * @param enemyAttacked
      * @param specialDamage
@@ -141,17 +140,18 @@ public class Fox extends Animal {
     }
 
     /**
-     * Hare's climbing speed.
+     * Fox's climbing speed.
      *
      * @return height
      */
     public int climb() {
         setHeight(getHeight() + this.climbDistance);
         System.out.println("The Fox begins scartching the tree "
-                        + "trunk latching on with it's paws.\nIt slowly climbs"
-                        + " " + this.climbDistance + "ft up the"
+                        + "trunk and latches on with its paws. "
+                        + "\nIt slowly climbs " + this.climbDistance
+                        + " feet up the"
                         + " tree.\nReaching "
-                        + "a height of " + getHeight() + "ft.");
+                        + "a height of " + getHeight() + " feet.");
         return getHeight();
     }
 }

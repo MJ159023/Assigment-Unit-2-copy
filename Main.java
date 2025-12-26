@@ -66,60 +66,61 @@ final class Main {
         fox.setAttackPower(Constants.FOX_ATTACK_POWER);
         fox.setAttackAccuracy(Constants.FOX_ATTACK_ACCURACY);
 
-        Squirell squirell = new Squirell(Constants.SQUIRELL_COLOR,
-                        Constants.SQUIRELL_NAME,
-                        Constants.SQUIRELL_INTIAL_HEALTH,
-                        Constants.SQUIRELL_DEFENSE,
-                        Constants.SQUIRELL_CLIMB_DISTANCE,
+        Squirrel squirrel = new Squirrel(Constants.SQUIRREL_COLOR,
+                        Constants.SQUIRREL_NAME,
+                        Constants.SQUIRREL_INTIAL_HEALTH,
+                        Constants.SQUIRREL_DEFENSE,
+                        Constants.SQUIRREL_CLIMB_DISTANCE,
                         Constants.GLIDE_DISTANCE);
-        squirell.setSpeed(Constants.INTIAL_SPEED);
-        squirell.setHeight(Constants.SQUIRELL_INTIAL_HEIGHT);
-        squirell.setFallDistance(Constants.FALL_DISTANCE);
-        squirell.setAttackPower(Constants.SQUIRELL_ATTACK_POWER);
-        squirell.setAttackAccuracy(Constants.SQUIRELL_ATTACK_ACCURACY);
+        squirrel.setSpeed(Constants.INTIAL_SPEED);
+        squirrel.setHeight(Constants.SQUIRREL_INTIAL_HEIGHT);
+        squirrel.setFallDistance(Constants.FALL_DISTANCE);
+        squirrel.setAttackPower(Constants.SQUIRREL_ATTACK_POWER);
+        squirrel.setAttackAccuracy(Constants.SQUIRREL_ATTACK_ACCURACY);
 
         MainPart2 mainPart2 = new MainPart2();
 
         // opening of the story.
-        System.out.println("There once was three animals in Jim's back yard.");
+        System.out.println("There once was three animals in Jim's backyard.");
         System.out.println("There was the daring " + hare.getColor()
                         + " " + hare.getName() + " who mastered his trusty"
                         + " boomerang.\nThen there was the "
                         + tortoise.getColor() + " " + tortoise.getName()
                         + " the slowest of the pack but also the "
                         + "strongest of the group.\nFinally there was the "
-                        + squirell.getColor()
-                        + " " + squirell.getName() + " the schemer of the trio"
-                        + " who had made his home in sally's treehouse,"
+                        + squirrel.getColor()
+                        + " " + squirrel.getName() + " the schemer of the trio"
+                        + " who had made his home in Sally's treehouse,"
                         + " Jim's daughter.");
 
         System.out.println("\n");
 
-        System.out.println("All was well for animals in the yard until winter "
-                        + "came.\nSuddenly the " + hare.getName() + " and "
-                        + tortoise.getName() + " awoke to find there winter "
+        System.out.println("All was well for the animals in the yard until "
+                        + "winter came.\nThe " + hare.getName()
+                        + " and " + tortoise.getName()
+                        + " awoke to find that their winter "
                         + "rations had been plundered. The only clue left was "
-                        + "a half eaten acorn.\nAs the two went to question"
-                        + " the " + squirell.getName()
-                        + " they realized he'd baricaded "
+                        + "a half-eaten acorn.\nAs the two went to question"
+                        + " the " + squirrel.getName()
+                        + " they realized he had baricaded "
                         + "himself inside the treehosue.\nThe two furious "
-                        + "gathered suplies to fight back and take back what "
-                        + "was rightfully their's\nand called to the spirit"
+                        + "gathered supplies to fight back and take back what "
+                        + "was rightfully theirs\nand called upon the spirit"
                         + " of the " + fox.getName() + " to aid them on their "
                         + "journey.");
 
         System.out.println("\n");
 
         System.out.println("The spirit of the " + fox.getName() + " accepted "
-                        + "their request on the condition that they help to "
+                        + "their request on the condition that they help "
                         + "turn Jim's yard into a safe haven for all the wild "
                         + "critters in the Peligara neighborhood.\nWhich they "
-                        + "gladly agree to. With that the three begin to "
-                        + "journey to defeat the " + squirell.getName() + "!");
+                        + "gladly agreed to. With that the three begin to "
+                        + "journey to defeat the " + squirrel.getName() + "!");
 
-        System.out.println("The group reach the great plastic pool of Pepco "
-                        + "they could go around but it would take longer.\n"
-                        + "The " + hare.getName() + " is unable to swim so "
+        System.out.println("The group reached, Pepco, the great plastic pool. "
+                        + "They could go around it, but it would take longer."
+                        + "\nThe " + hare.getName() + " is unable to swim so "
                         + "the " + tortoise.getName() + " decides to bring the"
                         + " " + hare.getName() + " on it's back.");
 
@@ -131,24 +132,24 @@ final class Main {
 
         System.out.println("\n");
 
-        System.out.println("Once reaching end of the pool an acorn suddenly "
-                        + "is fired from the tree "
+        System.out.println("Once reaching the end of the pool an "
+                        + "acorn is suddenly fired from the tree "
                         + "directly at the " + hare.getName() + ".");
 
-        hare.setDamage(squirell.basicAttack(squirell.getAttackPower(),
-                        squirell.getAttackAccuracy(), hare.getDefense(),
+        hare.setDamage(squirrel.basicAttack(squirrel.getAttackPower(),
+                        squirrel.getAttackAccuracy(), hare.getDefense(),
                         hare.getName()));
         hare.damageTaken();
 
         System.out.println("The " + hare.getName() + " has " + hare.getHealth()
                         + "hp left.\nThe " + hare.getName() + " looks up "
-                        + "to see the " + squirell.getName() + " firing it's "
+                        + "to see the " + squirrel.getName() + " firing its "
                         + "acorn cannon from the treehoue.");
 
         System.out.println("\n");
 
         System.out.println("The " + hare.getName()
-                        + " begins to sprint towords the tree"
+                        + " begins to sprint towards the tree"
                         + " 100ft away while trying to dodge the acorn "
                         + "volley.\nThe " + hare.getName() + " sprint lasts "
                         + "two seconds at a power of 15.");
@@ -156,15 +157,15 @@ final class Main {
         hare.accelerate(Constants.HARE_ACCELERATION_POWER,
                         Constants.HARE_ACCELERATION_TIME);
 
-        System.out.println("Another shot fires out.");
-        hare.setDamage(squirell.basicAttack(squirell.getAttackPower(),
-                                squirell.getAttackAccuracy(),
+        System.out.println("Another shot is fired out.");
+        hare.setDamage(squirrel.basicAttack(squirrel.getAttackPower(),
+                                squirrel.getAttackAccuracy(),
                                 hare.getDefense(), hare.getName()));
         hare.setSpeed(0); // rests speed because hare has  been haulted
         hare.damageTaken();
         System.out.println("The " + hare.getName() + " has " + hare.getHealth()
                         + "hp left.\nAnd after getting hit it "
-                        + "falls over unable to get back up.");
+                        + "falls over and is unable to get back up.");
 
         System.out.println("The " + tortoise.getName() + " moves as fast as it"
                         + " can to protect the " + hare.getName() + ".");
@@ -178,8 +179,8 @@ final class Main {
                         Constants.TORTOISE_BRAKE_TIME,
                         Constants.BRAKE_TIME_REDUCTION);
 
-        System.out.println("The " + squirell.getName() + " once again fires at"
-                        + " the " + hare.getName() + " but instead the "
+        System.out.println("The " + squirrel.getName() + " once again fires at"
+                        + " the " + hare.getName() + ", but this time "
                         + tortoise.getName() + " blocks the shot.");
         mainPart2.runMain2();
     }
