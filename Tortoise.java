@@ -135,7 +135,8 @@ public class Tortoise extends Animal {
      */
     public int specialMovement() {
         setDistanceTravelled(this.swimSpeed * this.swimTime);
-        System.out.println(getName() + " swims " + getDistanceTravelled()
+        System.out.println("The " + getName() + " swims "
+                        + getDistanceTravelled()
                         + " feet through the kiddy pool with the"
                         + " Hare on its back.");
         setForcedMovement(getDistanceTravelled());
@@ -153,7 +154,7 @@ public class Tortoise extends Animal {
                     final int specialDamage) {
         // adds defense when in shell
         setDefense(getDefense() + this.defenseBonus);
-        System.out.println("Tortoise tucks inside its shell"
+        System.out.println("The Tortoise tucks inside its shell"
                         + " and spins, bouncing off the " + enemyAttacked);
         setDamage(specialDamage);
         return getDamage();
@@ -166,7 +167,7 @@ public class Tortoise extends Animal {
      */
     public int climb() {
         System.out.println("The tortoise struggles to climb the tree and,"
-                        + " after lots of effort, the tortoise is still at"
+                        + " after lots of effort, the Tortoise is still at"
                         + " ground level.");
         return getHeight();
     }

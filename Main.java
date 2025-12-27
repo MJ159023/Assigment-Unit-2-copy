@@ -115,7 +115,7 @@ final class Main {
                         + "their request on the condition that they help "
                         + "turn Jim's yard into a safe haven for all the wild "
                         + "critters in the Peligara neighborhood.\nWhich they "
-                        + "gladly agreed to. With that the three begin to "
+                        + "gladly agreed to, with that the three begin to "
                         + "journey to defeat the " + squirrel.getName() + "!");
 
         System.out.println("The group reached, Pepco, the great plastic pool. "
@@ -126,7 +126,8 @@ final class Main {
 
         // sets swimTime to 4 seconds
         tortoise.setSwimTime(Constants.SWIM_TIME);
-        System.out.println("For 4 seconds the");
+        System.out.println("The " + tortoise.getName()
+                        + "swam for 4 seconds.");
         hare.setForcedMovement(tortoise.specialMovement());
         hare.forcedMovement();
 
@@ -178,7 +179,6 @@ final class Main {
         tortoise.brake(Constants.TORTOISE_BRAKE_POWER,
                         Constants.TORTOISE_BRAKE_TIME,
                         Constants.BRAKE_TIME_REDUCTION);
-
         System.out.println("The " + squirrel.getName() + " once again fires at"
                         + " the " + hare.getName() + ", but this time "
                         + tortoise.getName() + " blocks the shot.");

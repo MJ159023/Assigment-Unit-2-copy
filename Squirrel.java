@@ -141,7 +141,7 @@ public class Squirrel extends Animal {
      */
     public int climb() {
         setHeight(getHeight() + this.climbDistance);
-        System.out.println("The Squirrel begins scartching the tree "
+        System.out.println("The Squirrel begins scratching the tree "
                         + "trunk and latches on with its paws. "
                         + "\nIt slowly climbs " + this.climbDistance
                         + " feet up the"

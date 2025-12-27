@@ -89,7 +89,7 @@ public class MainPart2 {
         System.out.println("The " + squirrel.getName() + " has "
                         + squirrel.getHealth() + "hp left.\nThe "
                         + squirrel.getName() + " tries to flee to safety, "
-                        + "but before it can react the");
+                        + "but before it can react");
         hare.climb();
 
         hare.specialMovement();
@@ -107,7 +107,7 @@ public class MainPart2 {
 
         System.out.println("The " + fox.getName() + " and the "
                                 + tortoise.getName()
-                                + " folow up with another attack.");
+                                + " follow up with another attack.");
         fox.setAllyName(tortoise.getName());
         fox.setForcedMovement(Constants.TELEPORT_DISTANCE);
         fox.specialMovement();
@@ -124,7 +124,7 @@ public class MainPart2 {
         System.out.println("The " + squirrel.getName() + ", in one last "
                         + "desperate act, mades a run "
                         + "for its special acorn Gatling gun.");
-        System.out.println("It travells for 3 seconds at power of 7.");
+        System.out.println("It travels for 3 seconds at a power of 7.");
         squirrel.accelerate(Constants.SQUIRREL_ACCELERATION_POWER,
                         Constants.SQUIRREL_ACCELERATION_TIME);
         System.out.println("As it travels it is unable to stop and crashes "

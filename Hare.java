@@ -154,8 +154,8 @@ public class Hare extends Animal {
      */
     public int climb() {
         setHeight(getHeight() + this.climbDistance);
-        System.out.println("The Hare begins scraching the tree "
-                        + "trunk and latches on with it's paws.\nIt quickly "
+        System.out.println("The Hare begins scratching the tree "
+                        + "trunk and latches on with its paws.\nIt quickly "
                         + "climbs " + this.climbDistance + " feet up the"
                         + " tree.\nReaching "
                         + "a height of " + getHeight() + " feet.");

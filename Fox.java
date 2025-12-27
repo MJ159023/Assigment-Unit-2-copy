@@ -116,7 +116,7 @@ public class Fox extends Animal {
      * @return forcedMovement
      */
     public int specialMovement() {
-        System.out.println(getName() + " eyes light up in fiery glow as it"
+        System.out.println(getName() + "'s eyes light up in fiery glow as it"
                         + " teleports the " + this.allyName + " "
                         + getForcedMovement() + " feet.");
         return getForcedMovement();
@@ -132,7 +132,7 @@ public class Fox extends Animal {
     public int specialAbility(final String enemyAttacked,
                     final int specialDamage) {
         // special damage is negtive therby healing allies
-        System.out.println("The fox begins to light up as is sends "
+        System.out.println("The Fox begins to light up as is sends "
                         + "magical energy to the " + enemyAttacked + " healing"
                         + " " + specialDamage + " hp.");
         setDamage(specialDamage);
@@ -146,7 +146,7 @@ public class Fox extends Animal {
      */
     public int climb() {
         setHeight(getHeight() + this.climbDistance);
-        System.out.println("The Fox begins scartching the tree "
+        System.out.println("The Fox begins scratching the tree "
                         + "trunk and latches on with its paws. "
                         + "\nIt slowly climbs " + this.climbDistance
                         + " feet up the"
