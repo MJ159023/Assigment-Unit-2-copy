@@ -116,7 +116,8 @@ public class Fox extends Animal {
      * @return forcedMovement
      */
     public int specialMovement() {
-        System.out.println(getName() + "'s eyes light up in fiery glow as it"
+        System.out.println("The " + getName()
+                        + "'s eyes light up in fiery glow as it"
                         + " teleports the " + this.allyName + " "
                         + getForcedMovement() + " feet.");
         return getForcedMovement();
